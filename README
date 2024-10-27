@@ -1,0 +1,132 @@
+# API de Livros com Node.js, Express e MongoDB
+
+Este projeto é uma API RESTful desenvolvida com **Node.js**, **Express** e **MongoDB**. A aplicação permite gerenciar livros (cadastrar, listar, atualizar e excluir) em um banco de dados MongoDB.
+
+## Funcionalidades
+
+- Listar todos os livros
+- Listar livro por ID
+- Cadastrar um novo livro
+- Atualizar um livro existente
+- Excluir um livro
+
+## Tecnologias Utilizadas
+
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+
+## Pré-requisitos
+
+Antes de iniciar, você precisa ter o seguinte instalado na sua máquina:
+
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [MongoDB](https://www.mongodb.com/) (pode usar MongoDB local ou MongoDB Atlas)
+
+## Como Rodar o Projeto
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+2. Instalar as Dependências
+Navegue até o diretório do projeto e execute o comando abaixo para instalar todas as dependências necessárias.
+
+bash
+Copiar código
+cd seu-repositorio
+npm install
+3. Configurar Variáveis de Ambiente
+Crie um arquivo .env na raiz do projeto e adicione a string de conexão com o banco de dados MongoDB:
+
+bash
+Copiar código
+DB_CONNECTION_STRING=mongodb+srv://seu-usuario:senha@cluster.mongodb.net/seu-banco-de-dados?retryWrites=true&w=majority
+PORT=3000
+Certifique-se de substituir a string de conexão com as suas credenciais do MongoDB.
+
+4. Iniciar o Servidor
+Execute o seguinte comando para iniciar o servidor:
+
+bash
+Copiar código
+npm start
+O servidor estará rodando em http://localhost:3000.
+
+Endpoints da API
+Listar Todos os Livros
+http
+Copiar código
+GET /livros
+Listar Livro por ID
+http
+Copiar código
+GET /livros/:id
+Cadastrar Novo Livro
+http
+Copiar código
+POST /livros
+Body (JSON):
+
+json
+Copiar código
+{
+  "titulo": "O Hobbit",
+  "editora": "HarperCollins",
+  "preco": 39.90,
+  "paginas": 310
+}
+Atualizar Livro
+http
+Copiar código
+PUT /livros/:id
+Body (JSON):
+
+json
+Copiar código
+{
+  "titulo": "O Senhor dos Anéis",
+  "preco": 59.90
+}
+Excluir Livro
+http
+Copiar código
+DELETE /livros/:id
+Estrutura do Projeto
+bash
+Copiar código
+.
+├── src
+│   ├── app.js              # Configuração principal do Express e rotas
+│   ├── config
+│   │   └── dbConect.js      # Conexão com o banco de dados MongoDB
+│   ├── controllers
+│   │   └── livroControlle.js # Controladores das rotas de livros
+│   ├── modelo
+│   │   └── Livro.js         # Modelo de dados para os livros (Mongoose Schema)
+│   ├── routes
+│   │   ├── index.js         # Arquivo principal de rotas
+│   │   └── livrosRoutes.js  # Rotas relacionadas aos livros
+├── .env                     # Variáveis de ambiente (não compartilhar publicamente)
+├── package.json             # Dependências do projeto
+├── README.md                # Documentação do projeto
+Contribuições
+Contribuições são bem-vindas! Fique à vontade para abrir uma issue ou enviar um pull request.
+
+Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+markdown
+Copiar código
+
+### O que incluir:
+
+1. **Descrição Geral**: Informações sobre o que o projeto faz.
+2. **Tecnologias Utilizadas**: Lista das principais tecnologias.
+3. **Instruções de Configuração**: Como instalar, configurar variáveis de ambiente e rodar o projeto.
+4. **Rotas da API**: Exemplos de uso dos endpoints.
+5. **Estrutura do Projeto**: Organização dos arquivos para facilitar a navegação.
+6. **Contribuição e Licença**: Informações sobre como contribuir e o tipo de licença usada.
+
