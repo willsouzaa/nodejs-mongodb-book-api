@@ -28,4 +28,3 @@ async function conectaNaDataBase () {
 export default conectaNaDataBase;
 
 // A linha comentada abaixo é outro exemplo de URL de conexão ao MongoDB.
-// mongodb+srv://admin:<db_password>@cluster0.gr68w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
