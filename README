@@ -30,7 +30,7 @@ Antes de iniciar, você precisa ter o seguinte instalado na sua máquina:
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/willsouzaa/nodejs-mongodb-book-api.git
 2. Instalar as Dependências
 Navegue até o diretório do projeto e execute o comando abaixo para instalar todas as dependências necessárias.
 
